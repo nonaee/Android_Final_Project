@@ -1,4 +1,4 @@
-package com.example.android_project.androidproject;
+package com.example.fernomazer.androidproject;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
