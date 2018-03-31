@@ -20,7 +20,7 @@
     <ImageButton
         android:src="@mipmap/ic_dashboard"
         android:id="@+id/dashbordBtn"
-        android:background="#669999"
+        android:background="#2F4F4F"
         android:scaleType="fitCenter"
         android:tooltipText="Dashborad"
         android:layout_width="match_parent"
