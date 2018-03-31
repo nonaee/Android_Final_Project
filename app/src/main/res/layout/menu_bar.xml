@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+    <ImageButton
+        android:id="@+id/exchangeBtn"
+        android:background="#ffffff"
+        android:tooltipText="Currency Exchange"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/dashbordBtn"
+        android:background="#ffffff"
+        android:tooltipText="Dashborad"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/setttingBtn"
+        android:background="#ffffff"
+        android:tooltipText="App setting"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_weight="1" />
+</LinearLayout>
