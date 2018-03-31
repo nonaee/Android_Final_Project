@@ -7,24 +7,24 @@
     tools:showIn="@layout/activity_main">
 
     <ImageButton
+        android:src="@mipmap/ic_exchange"
         android:id="@+id/exchangeBtn"
-        android:background="#ffffff"
         android:tooltipText="Currency Exchange"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_weight="1" />
 
     <ImageButton
+        android:src="@mipmap/ic_dashboard"
         android:id="@+id/dashbordBtn"
-        android:background="#ffffff"
         android:tooltipText="Dashborad"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_weight="1" />
 
     <ImageButton
+        android:src="@mipmap/ic_setting"
         android:id="@+id/setttingBtn"
-        android:background="#ffffff"
         android:tooltipText="App setting"
         android:layout_width="wrap_content"
         android:layout_height="40dp"
