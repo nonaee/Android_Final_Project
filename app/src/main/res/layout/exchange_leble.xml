@@ -3,31 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/exchangeRate"
     android:layout_width="match_parent"
-    android:layout_margin="5dp"
-    android:layout_height="60dp"
-    tools:showIn="@layout/activity_main">
+    android:layout_height="50dp"
+    android:background="#f0f0f0"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main" >
 
-    <Button
+    <TextView
         android:id="@+id/country"
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.75"
+        android:layout_weight="1"
         android:text="@string/country_name"
-        android:background="@color/lebleColor"></Button>
+        android:textColor="#000000"
+        android:background="@drawable/exchange_border"
+        android:gravity="center"/>
 
-    <Button
+    <TextView
         android:id="@+id/buyRate"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/buy_rate"
-        android:background="@color/lebleColor"></Button>
+        android:textColor="#000000"
+        android:background="@drawable/exchange_border"
+        android:gravity="center"/>
 
-    <Button
+    <TextView
         android:id="@+id/sellRate"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="@string/sell_rate"
-        android:background="@color/lebleColor"></Button>
+        android:textColor="#000000"
+        android:background="@drawable/exchange_border"
+        android:gravity="center"/>
 </LinearLayout>
