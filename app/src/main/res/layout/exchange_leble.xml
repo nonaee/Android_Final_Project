@@ -15,7 +15,7 @@
         android:layout_weight="1"
         android:text="@string/country_name"
         android:textColor="#000000"
-        android:background="@drawable/exchange_border"
+        android:background="@null"
         android:gravity="center"/>
 
     <TextView
@@ -25,7 +25,7 @@
         android:layout_weight="1"
         android:text="@string/buy_rate"
         android:textColor="#000000"
-        android:background="@drawable/exchange_border"
+        android:background="@null"
         android:gravity="center"/>
 
     <TextView
@@ -35,6 +35,6 @@
         android:layout_weight="1"
         android:text="@string/sell_rate"
         android:textColor="#000000"
-        android:background="@drawable/exchange_border"
+        android:background="@null"
         android:gravity="center"/>
 </LinearLayout>
