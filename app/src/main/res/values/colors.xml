@@ -3,4 +3,5 @@
     <color name="colorPrimary">#5fa100</color>
     <color name="colorPrimaryDark">#1b1b1b</color>
     <color name="colorAccent">#5fa100</color>
+    <color name="lebleColor">#ffffff</color>
 </resources>

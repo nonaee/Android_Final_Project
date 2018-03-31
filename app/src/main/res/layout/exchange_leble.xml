@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/exchangeRate"
+    android:layout_width="match_parent"
+    android:layout_margin="5dp"
+    android:layout_height="60dp"
+    tools:showIn="@layout/activity_main">
+
+    <Button
+        android:id="@+id/country"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75"
+        android:text="@string/country_name"
+        android:background="@color/lebleColor"></Button>
+
+    <Button
+        android:id="@+id/buyRate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/buy_rate"
+        android:background="@color/lebleColor"></Button>
+
+    <Button
+        android:id="@+id/sellRate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="@string/sell_rate"
+        android:background="@color/lebleColor"></Button>
+</LinearLayout>
