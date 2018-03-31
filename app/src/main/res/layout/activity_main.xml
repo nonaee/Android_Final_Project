@@ -13,7 +13,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="#778899"
+        android:padding="12dp">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -51,6 +53,10 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
+            <include layout="@layout/exchange_leble" />
+            <include layout="@layout/exchange_leble" />
+            <include layout="@layout/exchange_leble" />
+            <include layout="@layout/exchange_leble" />
             <include layout="@layout/exchange_leble" />
             <include layout="@layout/exchange_leble" />
             <include layout="@layout/exchange_leble" />
