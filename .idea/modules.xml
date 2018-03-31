@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://D:/android/AndroidPro.iml" filepath="D:/android/AndroidPro.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidPro.iml" filepath="$PROJECT_DIR$/AndroidPro.iml" />
-      <module fileurl="file://D:\android\AndroidPro.iml" filepath="D:\android\AndroidPro.iml" />
-      <module fileurl="file://C:\Users\Bam Bam\AndroidStudioProjects\AndroidPro\android.iml" filepath="C:\Users\Bam Bam\AndroidStudioProjects\AndroidPro\android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidProject.iml" filepath="$PROJECT_DIR$/AndroidProject.iml" />
+      <module fileurl="file://C:/Users/Bam Bam/AndroidStudioProjects/AndroidPro/android.iml" filepath="C:/Users/Bam Bam/AndroidStudioProjects/AndroidPro/android.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
