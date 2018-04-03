@@ -60,29 +60,17 @@
             android:orientation="vertical">
 
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
-
             <include layout="@layout/exchange_leble" />
 
         </LinearLayout>
