@@ -17,6 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Exchange"></activity>
-    </application>
 
+
+    </application>
+    <uses-permission android:name="android.permission.INTERNET"/>
 </manifest>
