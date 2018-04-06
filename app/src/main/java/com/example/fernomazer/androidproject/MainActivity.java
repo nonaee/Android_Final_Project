@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("NatradaC's Log ","API Test | " + latest.getRates());
                 Log.d("NatradaC's Log ","THB Rate Test | " + latest.getRate("THB"));
 
-                buyrateTHB.setText(""+latest.getRate("THB"));
+                buyRateTHB.setText(""+latest.getRate("THB"));
 
             }
 
