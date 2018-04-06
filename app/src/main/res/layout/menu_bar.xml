@@ -7,33 +7,36 @@
     tools:showIn="@layout/activity_main">
 
     <ImageButton
+        android:contentDescription="@id/exchangeBtn"
         android:src="@mipmap/ic_exchange"
         android:id="@+id/exchangeBtn"
         android:background="#669999"
         android:scaleType="fitCenter"
-        android:tooltipText="Currency Exchange"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="8dp"/>
 
     <ImageButton
+        android:contentDescription="@id/dashbordBtn"
         android:src="@mipmap/ic_dashboard"
         android:id="@+id/dashbordBtn"
         android:background="#2F4F4F"
         android:scaleType="fitCenter"
-        android:tooltipText="Dashborad"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:padding="10dp"/>
 
     <ImageButton
+        android:contentDescription="@id/setttingBtn"
         android:src="@mipmap/ic_setting"
         android:id="@+id/setttingBtn"
         android:background="#669999"
         android:scaleType="fitCenter"
-        android:tooltipText="App setting"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
