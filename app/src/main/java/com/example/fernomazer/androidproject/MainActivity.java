@@ -3,6 +3,7 @@ package com.example.fernomazer.androidproject;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -19,11 +20,15 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        final TextView buyRateTHB = (TextView) findViewById(R.id.buyRate);
+
+
 
         //Error
         /*String urlFixer= "http://data.fixer.io/api/latest?access_key=07d3ae4dfadca745698d570b7cff098a";
@@ -41,6 +46,10 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<FixerObject> call, Response<FixerObject> response) {
                 FixerObject latest = response.body();
                 Log.d("NatradaC's Log ","API Test | " + latest.getRates());
+                Log.d("NatradaC's Log ","THB Rate Test | " + latest.getRate("THB"));
+
+                buyrateTHB.setText(""+latest.getRate("THB"));
+
             }
 
             @Override
@@ -48,36 +57,13 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
     }
 
-    public String getJSONUrl(String url){
-        HttpsURLConnection con = null;
-        try{
-            URL u = new URL(url);
-            con = (HttpsURLConnection) u.openConnection();
-            con.connect();
+    public String getJSONUrl(){
 
-            BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            StringBuilder sb = new StringBuilder();
-            String line;
-            while ((line = br.readLine()) != null){
-                sb.append(line + "\n");
-            }br.close();
-            return sb.toString();
 
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally {
-            if(con != null){
-                try {
-                    con.disconnect();
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-            }
-        }
         return null;
     }
 }

@@ -59,19 +59,19 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
-            <include layout="@layout/exchange_leble" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
+            <include layout="@layout/exchange_label" />
 
         </LinearLayout>
 
