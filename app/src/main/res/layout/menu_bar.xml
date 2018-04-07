@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    tools:showIn="@layout/activity_main">
+
+    <ImageButton
+        android:contentDescription="@id/exchangeBtn"
+        android:src="@mipmap/ic_exchange"
+        android:id="@+id/exchangeBtn"
+        android:background="#669999"
+        android:scaleType="fitCenter"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="8dp"/>
+
+    <ImageButton
+        android:contentDescription="@id/dashbordBtn"
+        android:src="@mipmap/ic_dashboard"
+        android:id="@+id/dashbordBtn"
+        android:background="#2F4F4F"
+        android:scaleType="fitCenter"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp"/>
+
+    <ImageButton
+        android:contentDescription="@id/setttingBtn"
+        android:src="@mipmap/ic_setting"
+        android:id="@+id/setttingBtn"
+        android:background="#669999"
+        android:scaleType="fitCenter"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:padding="10dp"/>
+</LinearLayout>
