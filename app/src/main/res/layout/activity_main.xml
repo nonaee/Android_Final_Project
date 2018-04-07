@@ -59,19 +59,39 @@
             android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
-            <include layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/AUD"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/CNY"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/EUR"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/GBP"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/HKD"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/JPY"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/KRW"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/NZD"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/SGD"
+                layout="@layout/exchange_label" />
+            <include
+                android:id="@+id/USD"
+                layout="@layout/exchange_label" />
+
+
+
 
         </LinearLayout>
 
