@@ -15,7 +15,7 @@
 
 
     <EditText
-
+        android:id="@+id/input1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"/>
@@ -25,6 +25,14 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:src="@mipmap/ic_arrows">
+
+    </ImageView>
 
     <EditText
         android:id="@+id/input2"
