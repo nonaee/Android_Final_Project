@@ -14,19 +14,27 @@
 
 
 
-    <EditText
-        android:id="@+id/input1"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"/>
+       >
+        <EditText
+            android:id="@+id/input1"
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0dp"
+            android:inputType="number" />
     <Spinner
         android:id="@+id/spinner1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"/>
+        android:spinnerMode="dropdown"
+        />
+    </LinearLayout>
 
-    <ImageView
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
@@ -35,17 +43,23 @@
     </ImageView>
 
     <EditText
-        android:id="@+id/input2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"/>
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"/>
-
+        >
+        <EditText
+            android:id="@+id/input2"
+            android:layout_width="306dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0dp"
+            android:inputType="number" />
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            />
+    </LinearLayout>
 
 </LinearLayout>
 
