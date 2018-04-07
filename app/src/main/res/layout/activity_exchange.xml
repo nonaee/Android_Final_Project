@@ -25,6 +25,13 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_arrows"
+        >
+
+    </ImageButton>
 
     <EditText
         android:id="@+id/input2"
