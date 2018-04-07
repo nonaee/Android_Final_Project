@@ -8,16 +8,14 @@
     android:orientation="vertical"
     tools:context="com.example.fernomazer.androidproject.Exchange">
 
-<<<<<<< HEAD
+
     <include layout="@layout/menu_bar" />
 
 
 
+
     <EditText
-        android:id="@+id/input1"
-=======
-    <EditText
->>>>>>> 9487b26296adbc785e08d93ba465053fc69e37ce
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"/>
@@ -29,10 +27,7 @@
         android:spinnerMode="dropdown"/>
 
     <EditText
-<<<<<<< HEAD
         android:id="@+id/input2"
-=======
->>>>>>> 9487b26296adbc785e08d93ba465053fc69e37ce
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"/>
@@ -43,8 +38,6 @@
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
 
-<<<<<<< HEAD
+
 </LinearLayout>
-=======
-</LinearLayout>
->>>>>>> 9487b26296adbc785e08d93ba465053fc69e37ce
+
