@@ -3,4 +3,16 @@
     <string name="country_name">Name</string>
     <string name="buy_rate">Buy price</string>
     <string name="sell_rate">Sell price</string>
+    <string-array name="currency">
+        <item>AUD</item>
+        <item>CNY</item>
+        <item>EUR</item>
+        <item>GBP</item>
+        <item>HKD</item>
+        <item>JPY</item>
+        <item>KRW</item>
+        <item>NZD</item>
+        <item>SGD</item>
+        <item>USD</item>
+    </string-array>
 </resources>

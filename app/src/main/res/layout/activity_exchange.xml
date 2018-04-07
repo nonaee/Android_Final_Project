@@ -25,14 +25,12 @@
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
-        
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:src="@mipmap/ic_arrows"
-
-        >
+        android:src="@mipmap/ic_arrows">
 
     </ImageView>
 
