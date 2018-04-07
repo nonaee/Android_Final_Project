@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView tvBuyRateAUD = (TextView) findViewById(R.id.buyRate);
         final TextView tvBuyRateCNY = (TextView) findViewById(R.id.buyRate);
         final TextView tvBuyRateEUR = (TextView) findViewById(R.id.buyRate);
+        final TextView tvBuyRateGBP = (TextView) findViewById(R.id.buyRate);
         final TextView tvBuyRateHKD = (TextView) findViewById(R.id.buyRate);
         final TextView tvBuyRateSGD = (TextView) findViewById(R.id.buyRate);
         final TextView tvBuyRateJPY = (TextView) findViewById(R.id.buyRate);
@@ -60,8 +61,18 @@ public class MainActivity extends AppCompatActivity {
 
                 NumberFormat formatter = new DecimalFormat("##.0000");
 
-                //TEST USD to THB
+                // This show currency based on THB Bath
+                tvBuyRateAUD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("AUD")));
+                tvBuyRateCNY.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("CNY")));
+                tvBuyRateEUR.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("EUR")));
+                tvBuyRateGBP.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("GBP")));
+                tvBuyRateHKD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("HKD")));
+                tvBuyRateSGD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("SGD")));
+                tvBuyRateJPY.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("JPY")));
+                tvBuyRateKRW.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("KRW")));
+                tvBuyRateNZD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("NZD")));
                 tvBuyRateUSD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("USD")));
+
                 //getCurrencyRate(latest);
 
             }
