@@ -13,16 +13,11 @@
 
 
 
-<<<<<<< HEAD
-    <LinearLayout
-=======
 
-    <EditText
-        android:id="@+id/input1"
->>>>>>> 4f865946409753caa81acd8bfa3532b7a15f3466
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+       >
         <EditText
             android:id="@+id/input1"
             android:layout_width="306dp"
@@ -38,24 +33,18 @@
         />
     </LinearLayout>
 
-<<<<<<< HEAD
-    <LinearLayout
-=======
     <ImageView
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:src="@mipmap/ic_arrows">
 
     </ImageView>
-
-    <EditText
-        android:id="@+id/input2"
->>>>>>> 4f865946409753caa81acd8bfa3532b7a15f3466
+<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
-
         <EditText
             android:id="@+id/input2"
             android:layout_width="306dp"
