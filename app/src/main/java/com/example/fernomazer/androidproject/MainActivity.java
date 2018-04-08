@@ -4,20 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-
-import javax.net.ssl.HttpsURLConnection;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -37,42 +28,52 @@ public class MainActivity extends AppCompatActivity {
         View vAUD = findViewById(R.id.AUD);
         final TextView tvBuyRateAUD = (TextView)vAUD.findViewById(R.id.buyRate);
         final ImageView imageViewAUD = (ImageView)vAUD.findViewById(R.id.flag);
+        final TextView tvCountryAUD = (TextView)vAUD.findViewById(R.id.country);
 
         View vCNY = findViewById(R.id.CNY);
         final TextView tvBuyRateCNY = (TextView)vCNY.findViewById(R.id.buyRate);
         final ImageView imageViewCNY = (ImageView)vCNY.findViewById(R.id.flag);
+        final TextView tvCountryCNY = (TextView)vCNY.findViewById(R.id.country);
 
         View vEUR = findViewById(R.id.EUR);
         final TextView tvBuyRateEUR = (TextView)vEUR.findViewById(R.id.buyRate);
         final ImageView imageViewEUR = (ImageView)vEUR.findViewById(R.id.flag);
+        final TextView tvCountryEUR = (TextView)vEUR.findViewById(R.id.country);
 
         View vGBP = findViewById(R.id.GBP);
         final TextView tvBuyRateGBP = (TextView)vGBP.findViewById(R.id.buyRate);
         final ImageView imageViewGBP = (ImageView)vGBP.findViewById(R.id.flag);
+        final TextView tvCountryGBP = (TextView)vGBP.findViewById(R.id.country);
 
         View vHKD = findViewById(R.id.HKD);
         final TextView tvBuyRateHKD = (TextView)vHKD.findViewById(R.id.buyRate);
         final ImageView imageViewHKD = (ImageView)vHKD.findViewById(R.id.flag);
+        final TextView tvCountryHKD = (TextView)vHKD.findViewById(R.id.country);
 
         View vSGD = findViewById(R.id.SGD);
         final TextView tvBuyRateSGD = (TextView)vSGD.findViewById(R.id.buyRate);
         final ImageView imageViewSGD = (ImageView)vSGD.findViewById(R.id.flag);
+        final TextView tvCountrySGD = (TextView)vSGD.findViewById(R.id.country);
 
         View vJPY = findViewById(R.id.JPY);
         final TextView tvBuyRateJPY = (TextView)vJPY.findViewById(R.id.buyRate);
         final ImageView imageViewJPY = (ImageView)vJPY.findViewById(R.id.flag);
+        final TextView tvCountryJPY = (TextView)vJPY.findViewById(R.id.country);
 
         View vKRW = findViewById(R.id.KRW);
         final TextView tvBuyRateKRW = (TextView)vKRW.findViewById(R.id.buyRate);
         final ImageView imageViewKRW = (ImageView)vKRW.findViewById(R.id.flag);
+        final TextView tvCountryKRW = (TextView)vKRW.findViewById(R.id.country);
 
         View vNZD = findViewById(R.id.NZD);
         final TextView tvBuyRateNZD = (TextView)vNZD.findViewById(R.id.buyRate);
         final ImageView imageViewNZD = (ImageView)vNZD.findViewById(R.id.flag);
+        final TextView tvCountryNZD = (TextView)vNZD.findViewById(R.id.country);
 
         View vUSD = findViewById(R.id.USD);
         final TextView tvBuyRateUSD = (TextView)vUSD.findViewById(R.id.buyRate);
         final ImageView imageViewUSD = (ImageView)vUSD.findViewById(R.id.flag);
+        final TextView tvCountryUSD = (TextView)vUSD.findViewById(R.id.country);
 
         //Error
         /*String urlFixer= "http://data.fixer.io/api/latest?access_key=07d3ae4dfadca745698d570b7cff098a";
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("NatradaC's Log ","API Test | " + latest.getRates());
                 //Log.d("NatradaC's Log ","THB Rate Test | " + latest.getRate("THB"));
 
-                NumberFormat formatter = new DecimalFormat("##.0000");
+                NumberFormat formatter = new DecimalFormat("#0.0000");
 
                 // This show currency based on THB Bath
 
@@ -108,8 +109,29 @@ public class MainActivity extends AppCompatActivity {
                 tvBuyRateUSD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("USD")));
 
 
-                //imageViewAUD.setImageResource(R.drawable.ic_launcher_background);
-                //getCurrencyRate(latest);
+                imageViewAUD.setImageResource(R.drawable.ic_aud_flag);
+                imageViewCNY.setImageResource(R.drawable.ic_cny_flag);
+                imageViewEUR.setImageResource(R.drawable.is_eur_flag);
+                imageViewGBP.setImageResource(R.drawable.ic_gbp_flag);
+                imageViewHKD.setImageResource(R.drawable.ic_hkd_flag);
+                imageViewJPY.setImageResource(R.drawable.ic_jpy_flag);
+                imageViewKRW.setImageResource(R.drawable.ic_krw_flag);
+                imageViewNZD.setImageResource(R.drawable.ic_nzd_flag);
+                imageViewSGD.setImageResource(R.drawable.ic_sgd_flag);
+                imageViewUSD.setImageResource(R.drawable.ic_usd_flag);
+
+                tvCountryAUD.setText("AUD");
+                tvCountryCNY.setText("CNY");
+                tvCountryEUR.setText("EUR");
+                tvCountryGBP.setText("GBP");
+                tvCountryHKD.setText("HKD");
+                tvCountryJPY.setText("JPY");
+                tvCountryKRW.setText("KRW");
+                tvCountryNZD.setText("NZD");
+                tvCountrySGD.setText("SGD");
+                tvCountryUSD.setText("USD");
+
+
 
             }
 
