@@ -15,28 +15,36 @@
 
 
     <EditText
-
+        android:id="@+id/sourceET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:text="0"/>
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinnerSource"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
 
+<!--
     <EditText
-        android:id="@+id/input2"
+        android:id="@+id/targetET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="number"/>
+-->
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerTarget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/targetTV"/>
 
 
 </LinearLayout>
