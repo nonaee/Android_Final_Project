@@ -8,7 +8,8 @@
     android:orientation="vertical"
     tools:context="com.example.fernomazer.androidproject.MainActivity">
 
-    <include layout="@layout/menu_bar" />
+    <include android:id="@+id/menu"
+        layout="@layout/menu_bar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="12dp"
-            android:text="Sell"
+            android:text="      "
             android:textSize="20dp"
             android:textColor="#000000"
             android:layout_weight="1"
