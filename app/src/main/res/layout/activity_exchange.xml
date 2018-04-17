@@ -12,25 +12,21 @@
     <include layout="@layout/menu_bar" />
 
 
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-       >
+        android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/input1"
+            android:id="@+id/sourceET"
             android:layout_width="306dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0dp"
-            android:inputType="number" />
-    <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"
-        />
+            android:inputType="number"
+            android:text="0"/>
+        <Spinner
+            android:id="@+id/spinnerSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown" />
     </LinearLayout>
 
 
@@ -42,23 +38,21 @@
 
     </ImageView>
 
-    <LinearLayout
+    <Spinner
+        android:id="@+id/spinnerTarget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
-        <EditText
-            android:id="@+id/input2"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
             android:layout_width="306dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0dp"
-            android:inputType="number" />
-        <Spinner
-            android:id="@+id/spinner2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"
-            />
+            android:id="@+id/targetTV"/>
+
     </LinearLayout>
 
 </LinearLayout>
