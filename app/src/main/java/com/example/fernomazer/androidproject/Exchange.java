@@ -43,7 +43,7 @@ public class Exchange extends AppCompatActivity {
         //final EditText targetET = (EditText) findViewById(R.id.targetET);
         final TextView targetTV = (TextView) findViewById(R.id.targetTV);
         String[] arrayCurrency = new String[]
-                {"AUD","CNY","GBP","HKD","JPY","KRW","NZD","SGD","USD","EUR"};
+                {"AUD","CNY","GBP","HKD","JPY","KRW","NZD","SGD","THB","USD","EUR"};
 
         final Spinner spinnerCurrencySource = (Spinner) findViewById(R.id.spinnerSource);
         Spinner spinnerCurrencyTarget = (Spinner) findViewById(R.id.spinnerTarget);

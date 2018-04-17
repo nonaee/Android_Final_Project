@@ -17,16 +17,19 @@
         android:layout_height="wrap_content">
         <EditText
             android:id="@+id/sourceET"
-            android:layout_width="306dp"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:inputType="number"
+            android:textAlignment="center"
             android:text="0"/>
         <Spinner
             android:id="@+id/spinnerSource"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown" />
+            android:spinnerMode="dropdown"
+            android:textAlignment="center"
+            android:gravity="center"/>
     </LinearLayout>
 
 
@@ -42,6 +45,8 @@
         android:id="@+id/spinnerTarget"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:gravity="center"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown"/>
 
