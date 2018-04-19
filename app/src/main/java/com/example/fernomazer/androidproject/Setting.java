@@ -27,12 +27,12 @@ public class Setting extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
 
-        Spinner dropdown = findViewById(R.id.spinnerLanguage);
+        Spinner lan = findViewById(R.id.spinnerLanguage);
         String[] language = new String[]{"English", "Thai", "China" , "Japan"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, language);
-        dropdown.setAdapter(adapter);
+        lan.setAdapter(adapter);
 
-        dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        lan.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Object item = parent.getSelectedItem();
