@@ -9,11 +9,12 @@ import android.widget.Spinner;
 
 public class Setting extends AppCompatActivity {
 
-
     public void setLanguage(String selectlanguage) {
         this.selectlanguage = selectlanguage;
     }
+
     private String selectlanguage;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
