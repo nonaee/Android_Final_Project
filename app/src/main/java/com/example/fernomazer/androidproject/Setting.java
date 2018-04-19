@@ -1,7 +1,7 @@
 package com.example.fernomazer.androidproject;
 
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -9,7 +9,7 @@ import android.widget.Spinner;
 
 public class Setting extends AppCompatActivity {
 
-    public void setLanguage(String selectlanguage) {
+    public void selectLanguage(String selectlanguage) {
         this.selectlanguage = selectlanguage;
     }
 
@@ -18,7 +18,7 @@ public class Setting extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.setting);
+        setContentView(R.layout.activity_setting);
         final String[] language = new String[]{"English","Australian","Chinese","Japanese","South Korean","Thai"};
         Spinner spinnerLanguage = (Spinner) findViewById(R.id.spinnerLanguage);
 
@@ -42,5 +42,4 @@ public class Setting extends AppCompatActivity {
             }
         });
     }
-
 }
