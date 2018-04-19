@@ -1,5 +1,6 @@
 package com.example.fernomazer.androidproject;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,12 +19,16 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity {
-
+    private String selectLanguage;
+    private TextView currency, buy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        currency = (TextView) findViewById(R.id.currency);
+        buy = (TextView) findViewById(R.id.buy);
 
         View menu = findViewById(R.id.menu);
         ImageButton imbDashboard = (ImageButton) menu.findViewById(R.id.dashboardBtn);
@@ -34,76 +39,73 @@ public class MainActivity extends AppCompatActivity {
         //Implement menu here
 
 
-
-
-
         //final TextView tvBuyRateTHB = (TextView) findViewById(R.id);
         View vAUD = findViewById(R.id.AUD);
-        final TextView tvBuyRateAUD = (TextView)vAUD.findViewById(R.id.buyRate);
-        final ImageView imageViewAUD = (ImageView)vAUD.findViewById(R.id.flag);
-        final TextView tvCountryAUD = (TextView)vAUD.findViewById(R.id.country);
+        final TextView tvBuyRateAUD = (TextView) vAUD.findViewById(R.id.buyRate);
+        final ImageView imageViewAUD = (ImageView) vAUD.findViewById(R.id.flag);
+        final TextView tvCountryAUD = (TextView) vAUD.findViewById(R.id.country);
         final ImageButton imbAUD = (ImageButton) vAUD.findViewById(R.id.goExchange);
 
         View vCNY = findViewById(R.id.CNY);
-        final TextView tvBuyRateCNY = (TextView)vCNY.findViewById(R.id.buyRate);
-        final ImageView imageViewCNY = (ImageView)vCNY.findViewById(R.id.flag);
-        final TextView tvCountryCNY = (TextView)vCNY.findViewById(R.id.country);
+        final TextView tvBuyRateCNY = (TextView) vCNY.findViewById(R.id.buyRate);
+        final ImageView imageViewCNY = (ImageView) vCNY.findViewById(R.id.flag);
+        final TextView tvCountryCNY = (TextView) vCNY.findViewById(R.id.country);
         ImageButton imbCNY = (ImageButton) vCNY.findViewById(R.id.goExchange);
 
 
         View vEUR = findViewById(R.id.EUR);
-        final TextView tvBuyRateEUR = (TextView)vEUR.findViewById(R.id.buyRate);
-        final ImageView imageViewEUR = (ImageView)vEUR.findViewById(R.id.flag);
-        final TextView tvCountryEUR = (TextView)vEUR.findViewById(R.id.country);
+        final TextView tvBuyRateEUR = (TextView) vEUR.findViewById(R.id.buyRate);
+        final ImageView imageViewEUR = (ImageView) vEUR.findViewById(R.id.flag);
+        final TextView tvCountryEUR = (TextView) vEUR.findViewById(R.id.country);
         ImageButton imbEUR = (ImageButton) vEUR.findViewById(R.id.goExchange);
 
 
         View vGBP = findViewById(R.id.GBP);
-        final TextView tvBuyRateGBP = (TextView)vGBP.findViewById(R.id.buyRate);
-        final ImageView imageViewGBP = (ImageView)vGBP.findViewById(R.id.flag);
-        final TextView tvCountryGBP = (TextView)vGBP.findViewById(R.id.country);
+        final TextView tvBuyRateGBP = (TextView) vGBP.findViewById(R.id.buyRate);
+        final ImageView imageViewGBP = (ImageView) vGBP.findViewById(R.id.flag);
+        final TextView tvCountryGBP = (TextView) vGBP.findViewById(R.id.country);
         ImageButton imbGBP = (ImageButton) vEUR.findViewById(R.id.goExchange);
 
 
         View vHKD = findViewById(R.id.HKD);
-        final TextView tvBuyRateHKD = (TextView)vHKD.findViewById(R.id.buyRate);
-        final ImageView imageViewHKD = (ImageView)vHKD.findViewById(R.id.flag);
-        final TextView tvCountryHKD = (TextView)vHKD.findViewById(R.id.country);
+        final TextView tvBuyRateHKD = (TextView) vHKD.findViewById(R.id.buyRate);
+        final ImageView imageViewHKD = (ImageView) vHKD.findViewById(R.id.flag);
+        final TextView tvCountryHKD = (TextView) vHKD.findViewById(R.id.country);
         ImageButton imbHKD = (ImageButton) vHKD.findViewById(R.id.goExchange);
 
 
         View vSGD = findViewById(R.id.SGD);
-        final TextView tvBuyRateSGD = (TextView)vSGD.findViewById(R.id.buyRate);
-        final ImageView imageViewSGD = (ImageView)vSGD.findViewById(R.id.flag);
-        final TextView tvCountrySGD = (TextView)vSGD.findViewById(R.id.country);
+        final TextView tvBuyRateSGD = (TextView) vSGD.findViewById(R.id.buyRate);
+        final ImageView imageViewSGD = (ImageView) vSGD.findViewById(R.id.flag);
+        final TextView tvCountrySGD = (TextView) vSGD.findViewById(R.id.country);
         ImageButton imbSGD = (ImageButton) vSGD.findViewById(R.id.goExchange);
 
 
         View vJPY = findViewById(R.id.JPY);
-        final TextView tvBuyRateJPY = (TextView)vJPY.findViewById(R.id.buyRate);
-        final ImageView imageViewJPY = (ImageView)vJPY.findViewById(R.id.flag);
-        final TextView tvCountryJPY = (TextView)vJPY.findViewById(R.id.country);
+        final TextView tvBuyRateJPY = (TextView) vJPY.findViewById(R.id.buyRate);
+        final ImageView imageViewJPY = (ImageView) vJPY.findViewById(R.id.flag);
+        final TextView tvCountryJPY = (TextView) vJPY.findViewById(R.id.country);
         ImageButton imbJPY = (ImageButton) vJPY.findViewById(R.id.goExchange);
 
 
         View vKRW = findViewById(R.id.KRW);
-        final TextView tvBuyRateKRW = (TextView)vKRW.findViewById(R.id.buyRate);
-        final ImageView imageViewKRW = (ImageView)vKRW.findViewById(R.id.flag);
-        final TextView tvCountryKRW = (TextView)vKRW.findViewById(R.id.country);
+        final TextView tvBuyRateKRW = (TextView) vKRW.findViewById(R.id.buyRate);
+        final ImageView imageViewKRW = (ImageView) vKRW.findViewById(R.id.flag);
+        final TextView tvCountryKRW = (TextView) vKRW.findViewById(R.id.country);
         ImageButton imbKRW = (ImageButton) vKRW.findViewById(R.id.goExchange);
 
 
         View vNZD = findViewById(R.id.NZD);
-        final TextView tvBuyRateNZD = (TextView)vNZD.findViewById(R.id.buyRate);
-        final ImageView imageViewNZD = (ImageView)vNZD.findViewById(R.id.flag);
-        final TextView tvCountryNZD = (TextView)vNZD.findViewById(R.id.country);
+        final TextView tvBuyRateNZD = (TextView) vNZD.findViewById(R.id.buyRate);
+        final ImageView imageViewNZD = (ImageView) vNZD.findViewById(R.id.flag);
+        final TextView tvCountryNZD = (TextView) vNZD.findViewById(R.id.country);
         ImageButton imbNZD = (ImageButton) vNZD.findViewById(R.id.goExchange);
 
 
         View vUSD = findViewById(R.id.USD);
-        final TextView tvBuyRateUSD = (TextView)vUSD.findViewById(R.id.buyRate);
-        final ImageView imageViewUSD = (ImageView)vUSD.findViewById(R.id.flag);
-        final TextView tvCountryUSD = (TextView)vUSD.findViewById(R.id.country);
+        final TextView tvBuyRateUSD = (TextView) vUSD.findViewById(R.id.buyRate);
+        final ImageView imageViewUSD = (ImageView) vUSD.findViewById(R.id.flag);
+        final TextView tvCountryUSD = (TextView) vUSD.findViewById(R.id.country);
         ImageButton imbUSD = (ImageButton) vUSD.findViewById(R.id.goExchange);
 
 
@@ -111,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         /*String urlFixer= "http://data.fixer.io/api/latest?access_key=07d3ae4dfadca745698d570b7cff098a";
         System.out.println(this.getJSONUrl(urlFixer));*/
 
-        final String urlFixer= "http://data.fixer.io/api/";
+        final String urlFixer = "http://data.fixer.io/api/";
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(urlFixer)
                 .addConverterFactory(GsonConverterFactory.create())
@@ -122,23 +124,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<FixerObject> call, Response<FixerObject> response) {
                 FixerObject latest = response.body();
-                Log.d("NatradaC's Log ","API Test | " + latest.getRates());
+                Log.d("NatradaC's Log ", "API Test | " + latest.getRates());
                 //Log.d("NatradaC's Log ","THB Rate Test | " + latest.getRate("THB"));
 
                 NumberFormat formatter = new DecimalFormat("#0.0000");
 
                 // This show currency based on THB Bath
 
-                tvBuyRateAUD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("AUD")));
-                tvBuyRateCNY.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("CNY")));
-                tvBuyRateEUR.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("EUR")));
-                tvBuyRateGBP.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("GBP")));
-                tvBuyRateHKD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("HKD")));
-                tvBuyRateSGD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("SGD")));
-                tvBuyRateJPY.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("JPY")));
-                tvBuyRateKRW.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("KRW")));
-                tvBuyRateNZD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("NZD")));
-                tvBuyRateUSD.setText(""+formatter.format(latest.getRate("THB")/latest.getRate("USD")));
+                tvBuyRateAUD.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("AUD")));
+                tvBuyRateCNY.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("CNY")));
+                tvBuyRateEUR.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("EUR")));
+                tvBuyRateGBP.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("GBP")));
+                tvBuyRateHKD.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("HKD")));
+                tvBuyRateSGD.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("SGD")));
+                tvBuyRateJPY.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("JPY")));
+                tvBuyRateKRW.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("KRW")));
+                tvBuyRateNZD.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("NZD")));
+                tvBuyRateUSD.setText("" + formatter.format(latest.getRate("THB") / latest.getRate("USD")));
 
 
                 imageViewAUD.setImageResource(R.drawable.ic_aud_flag);
@@ -175,7 +177,6 @@ public class MainActivity extends AppCompatActivity {
 */
 
 
-
             }
 
             @Override
@@ -183,8 +184,35 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        changeLanguage();
+    }
 
+    private void changeLanguage() {
+        Intent intent = getIntent();
+        this.selectLanguage = intent.getStringExtra("Language");
 
+        switch (this.selectLanguage) {
+            case "English":
+                currency.setText("Currency");
+                buy.setText("Buy");
+                break;
+            case "Thai":
+                currency.setText("เงินตรา");
+                buy.setText("ราคาซื้อ");
+                break;
+            case "China":
+                currency.setText("货币");
+                buy.setText("购买");
+                break;
+            case "Japan":
+                currency.setText("通貨");
+                buy.setText("購入");
+                break;
+            default:
+                currency.setText("Currency");
+                buy.setText("Buy");
+                break;
+        }
     }
 
 }
