@@ -32,4 +32,10 @@
             android:layout_marginTop="5dp"
             />
     </LinearLayout>
+    <TextView
+        android:id="@+id/testText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="555"
+        android:textSize="20dp"/>
 </LinearLayout>
