@@ -12,27 +12,28 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="1.25"
+        android:layout_weight="1.4"
         android:orientation="horizontal"
+        android:layout_gravity="center"
         android:background="@mipmap/border">
 
         <ImageView
             android:id="@+id/flag"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.5"
+            android:layout_weight="0.52"
             android:layout_margin="5dp"
             android:padding="5dp"
-            android:scaleType="fitCenter"
+            android:scaleType="fitEnd"
             android:src="@mipmap/ic_flag" />
         <TextView
             android:id="@+id/country"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.75"
+            android:layout_weight="0.6"
             android:background="@null"
-            android:gravity="left|center_vertical"
-            android:text="THB"
+            android:gravity="center_vertical"
+            android:text="SRC"
             android:textSize="18dp"
             android:textColor="#000000"/>
     </LinearLayout>
@@ -40,28 +41,29 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_weight="0.85"
+        android:layout_weight="1.6"
         android:background="@mipmap/border">
 
         <TextView
             android:id="@+id/buyRate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="0.85"
+            android:layout_weight="1.6"
             android:background="@null"
-            android:gravity="left|center_vertical"
+            android:gravity="center_vertical"
             android:text="@string/buy_rate"
+            android:textAlignment="center"
             android:textSize="18dp"
             android:textColor="#000000"
             android:inputType="numberDecimal"/>
     </LinearLayout>
-
+<!--
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.85"
         android:background="@mipmap/border">
-<!--
+&lt;!&ndash;
         <TextView
             android:id="@+id/sellRate"
             android:layout_width="0dp"
@@ -71,7 +73,7 @@
             android:gravity="center"
             android:text="@string/sell_rate"
             android:textSize="18dp"
-            android:textColor="#000000"/>-->
+            android:textColor="#000000"/>&ndash;&gt;
 
 
         <ImageButton
@@ -84,5 +86,5 @@
             android:background="@drawable/exchange"
             />
 
-    </LinearLayout>
+    </LinearLayout>-->
 </LinearLayout>

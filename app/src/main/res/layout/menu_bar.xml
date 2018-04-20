@@ -22,7 +22,7 @@
         android:contentDescription="@id/dashboardBtn"
         android:src="@mipmap/ic_dashboard"
         android:id="@+id/dashboardBtn"
-        android:background="#2F4F4F"
+        android:background="#669999"
         android:scaleType="fitCenter"
 
         android:layout_width="match_parent"

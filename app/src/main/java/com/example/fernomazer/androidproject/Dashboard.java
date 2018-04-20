@@ -1,6 +1,8 @@
 package com.example.fernomazer.androidproject;
 
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +20,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity {
+public class Dashboard extends AppCompatActivity {
     private String selectLanguage;
     private TextView currency, buy;
 
@@ -35,8 +37,36 @@ public class MainActivity extends AppCompatActivity {
         ImageButton imbExchange = (ImageButton) menu.findViewById(R.id.exchangeBtn);
         ImageButton imbSetting = (ImageButton) menu.findViewById(R.id.settingBtn);
 
+        imbDashboard.setBackground(new ColorDrawable(Color.parseColor("#2F4F4F")));
 
         //Implement menu here
+       imbDashboard.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                Intent intent = new Intent(Dashboard.this, Dashboard.class);
+
+                                                startActivity(intent);
+                                            }
+                                        }
+        );
+
+        imbExchange.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                Intent intent = new Intent(Dashboard.this, Exchange.class);
+
+                                                startActivity(intent);
+                                            }
+                                        }
+        );
+        imbSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Dashboard.this, Setting.class);
+
+                startActivity(intent);
+            }
+        });
 
 
         //final TextView tvBuyRateTHB = (TextView) findViewById(R.id);
@@ -44,69 +74,69 @@ public class MainActivity extends AppCompatActivity {
         final TextView tvBuyRateAUD = (TextView) vAUD.findViewById(R.id.buyRate);
         final ImageView imageViewAUD = (ImageView) vAUD.findViewById(R.id.flag);
         final TextView tvCountryAUD = (TextView) vAUD.findViewById(R.id.country);
-        final ImageButton imbAUD = (ImageButton) vAUD.findViewById(R.id.goExchange);
+       // final ImageButton imbAUD = (ImageButton) vAUD.findViewById(R.id.goExchange);
 
         View vCNY = findViewById(R.id.CNY);
         final TextView tvBuyRateCNY = (TextView) vCNY.findViewById(R.id.buyRate);
         final ImageView imageViewCNY = (ImageView) vCNY.findViewById(R.id.flag);
         final TextView tvCountryCNY = (TextView) vCNY.findViewById(R.id.country);
-        ImageButton imbCNY = (ImageButton) vCNY.findViewById(R.id.goExchange);
+        //ImageButton imbCNY = (ImageButton) vCNY.findViewById(R.id.goExchange);
 
 
         View vEUR = findViewById(R.id.EUR);
         final TextView tvBuyRateEUR = (TextView) vEUR.findViewById(R.id.buyRate);
         final ImageView imageViewEUR = (ImageView) vEUR.findViewById(R.id.flag);
         final TextView tvCountryEUR = (TextView) vEUR.findViewById(R.id.country);
-        ImageButton imbEUR = (ImageButton) vEUR.findViewById(R.id.goExchange);
+        //ImageButton imbEUR = (ImageButton) vEUR.findViewById(R.id.goExchange);
 
 
         View vGBP = findViewById(R.id.GBP);
         final TextView tvBuyRateGBP = (TextView) vGBP.findViewById(R.id.buyRate);
         final ImageView imageViewGBP = (ImageView) vGBP.findViewById(R.id.flag);
         final TextView tvCountryGBP = (TextView) vGBP.findViewById(R.id.country);
-        ImageButton imbGBP = (ImageButton) vEUR.findViewById(R.id.goExchange);
+        //ImageButton imbGBP = (ImageButton) vEUR.findViewById(R.id.goExchange);
 
 
         View vHKD = findViewById(R.id.HKD);
         final TextView tvBuyRateHKD = (TextView) vHKD.findViewById(R.id.buyRate);
         final ImageView imageViewHKD = (ImageView) vHKD.findViewById(R.id.flag);
         final TextView tvCountryHKD = (TextView) vHKD.findViewById(R.id.country);
-        ImageButton imbHKD = (ImageButton) vHKD.findViewById(R.id.goExchange);
+        //ImageButton imbHKD = (ImageButton) vHKD.findViewById(R.id.goExchange);
 
 
         View vSGD = findViewById(R.id.SGD);
         final TextView tvBuyRateSGD = (TextView) vSGD.findViewById(R.id.buyRate);
         final ImageView imageViewSGD = (ImageView) vSGD.findViewById(R.id.flag);
         final TextView tvCountrySGD = (TextView) vSGD.findViewById(R.id.country);
-        ImageButton imbSGD = (ImageButton) vSGD.findViewById(R.id.goExchange);
+        //ImageButton imbSGD = (ImageButton) vSGD.findViewById(R.id.goExchange);
 
 
         View vJPY = findViewById(R.id.JPY);
         final TextView tvBuyRateJPY = (TextView) vJPY.findViewById(R.id.buyRate);
         final ImageView imageViewJPY = (ImageView) vJPY.findViewById(R.id.flag);
         final TextView tvCountryJPY = (TextView) vJPY.findViewById(R.id.country);
-        ImageButton imbJPY = (ImageButton) vJPY.findViewById(R.id.goExchange);
+        //ImageButton imbJPY = (ImageButton) vJPY.findViewById(R.id.goExchange);
 
 
         View vKRW = findViewById(R.id.KRW);
         final TextView tvBuyRateKRW = (TextView) vKRW.findViewById(R.id.buyRate);
         final ImageView imageViewKRW = (ImageView) vKRW.findViewById(R.id.flag);
         final TextView tvCountryKRW = (TextView) vKRW.findViewById(R.id.country);
-        ImageButton imbKRW = (ImageButton) vKRW.findViewById(R.id.goExchange);
+        //ImageButton imbKRW = (ImageButton) vKRW.findViewById(R.id.goExchange);
 
 
         View vNZD = findViewById(R.id.NZD);
         final TextView tvBuyRateNZD = (TextView) vNZD.findViewById(R.id.buyRate);
         final ImageView imageViewNZD = (ImageView) vNZD.findViewById(R.id.flag);
         final TextView tvCountryNZD = (TextView) vNZD.findViewById(R.id.country);
-        ImageButton imbNZD = (ImageButton) vNZD.findViewById(R.id.goExchange);
+        //ImageButton imbNZD = (ImageButton) vNZD.findViewById(R.id.goExchange);
 
 
         View vUSD = findViewById(R.id.USD);
         final TextView tvBuyRateUSD = (TextView) vUSD.findViewById(R.id.buyRate);
         final ImageView imageViewUSD = (ImageView) vUSD.findViewById(R.id.flag);
         final TextView tvCountryUSD = (TextView) vUSD.findViewById(R.id.country);
-        ImageButton imbUSD = (ImageButton) vUSD.findViewById(R.id.goExchange);
+        //ImageButton imbUSD = (ImageButton) vUSD.findViewById(R.id.goExchange);
 
 
         //Error
@@ -123,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         service.getLatest().enqueue(new Callback<FixerObject>() {
             @Override
             public void onResponse(Call<FixerObject> call, Response<FixerObject> response) {
-                FixerObject latest = response.body();
+                final FixerObject latest = response.body();
                 Log.d("NatradaC's Log ", "API Test | " + latest.getRates());
                 //Log.d("NatradaC's Log ","THB Rate Test | " + latest.getRate("THB"));
 
@@ -171,11 +201,12 @@ public class MainActivity extends AppCompatActivity {
                 imbAUD.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Exchange exchange
+                        Intent intent = new Intent(Dashboard.this, Exchange.class);
+                        intent.putExtra("SourceText","THB");
+                        startActivity(intent);
                     }
                 });
 */
-
 
             }
 
@@ -184,35 +215,42 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
         changeLanguage();
+
     }
 
     private void changeLanguage() {
         Intent intent = getIntent();
         this.selectLanguage = intent.getStringExtra("Language");
-
-        switch (this.selectLanguage) {
-            case "English":
-                currency.setText("Currency");
-                buy.setText("Buy");
-                break;
-            case "Thai":
-                currency.setText("เงินตรา");
-                buy.setText("ราคาซื้อ");
-                break;
-            case "China":
-                currency.setText("货币");
-                buy.setText("购买");
-                break;
-            case "Japan":
-                currency.setText("通貨");
-                buy.setText("購入");
-                break;
-            default:
-                currency.setText("Currency");
-                buy.setText("Buy");
-                break;
+        try {
+            switch (this.selectLanguage) {
+                case "English":
+                    currency.setText("Currency");
+                    buy.setText("Buying Rate");
+                    break;
+                case "Thai":
+                    currency.setText("สกุลเงิน");
+                    buy.setText("ราคาซื้อ");
+                    break;
+                case "China":
+                    currency.setText("货币");
+                    buy.setText("购买");
+                    break;
+                case "Japan":
+                    currency.setText("通貨");
+                    buy.setText("購入");
+                    break;
+                default:
+                    currency.setText("Currency");
+                    buy.setText("Buying Rate");
+                    break;
+            }
+        }catch (Exception e){
+            currency.setText("Currency");
+            buy.setText("Buying Rate");
         }
+
     }
 
 }
