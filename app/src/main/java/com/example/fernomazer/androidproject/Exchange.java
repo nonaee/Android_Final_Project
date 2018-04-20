@@ -1,5 +1,8 @@
 package com.example.fernomazer.androidproject;
 
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,9 +10,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -21,23 +25,57 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Exchange extends AppCompatActivity {
-    public void setSourceCurrencyText(String sourceCurrencyText) {
-        this.sourceCurrencyText = sourceCurrencyText;
-    }
-
-    public void setTargetCurrencyText(String targetCurrencyText) {
-        this.targetCurrencyText = targetCurrencyText;
-    }
 
     private String sourceCurrencyText;
     private String targetCurrencyText;
     private double sourceCurrency;
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exchange);
+
+        View menu = findViewById(R.id.menu);
+        ImageButton imbDashboard = (ImageButton) menu.findViewById(R.id.dashboardBtn);
+        ImageButton imbExchange = (ImageButton) menu.findViewById(R.id.exchangeBtn);
+        ImageButton imbSetting = (ImageButton) menu.findViewById(R.id.settingBtn);
+
+        imbExchange.setBackground(new ColorDrawable(Color.parseColor("#2F4F4F")));
+
+        ImageView imvExchange = (ImageView) findViewById(R.id.imvExchange);
+
+
+        //Implement menu here
+        imbDashboard.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                Intent intent = new Intent(Exchange.this, Dashboard.class);
+
+                                                startActivity(intent);
+                                            }
+                                        }
+        );
+
+        imbExchange.setOnClickListener(new View.OnClickListener() {
+                                           @Override
+                                           public void onClick(View view) {
+                                               Intent intent = new Intent(Exchange.this, Exchange.class);
+
+                                               startActivity(intent);
+                                           }
+                                       }
+        );
+        imbSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Exchange.this, Setting.class);
+
+                startActivity(intent);
+            }
+        });
 
         final EditText sourceET = (EditText) findViewById(R.id.sourceET);
         //final EditText targetET = (EditText) findViewById(R.id.targetET);
@@ -71,6 +109,7 @@ public class Exchange extends AppCompatActivity {
 
             }
         });
+
 
         spinnerCurrencyTarget.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -113,5 +152,42 @@ public class Exchange extends AppCompatActivity {
 
             }
         });
+
+
+        imvExchange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                sourceCurrency = Double.parseDouble(sourceET.getText().toString());
+
+                final String urlFixer= "http://data.fixer.io/api/";
+                Retrofit retrofit = new Retrofit.Builder()
+                        .baseUrl(urlFixer)
+                        .addConverterFactory(GsonConverterFactory.create())
+                        .build();
+
+                FixerService service = retrofit.create(FixerService.class);
+                service.getLatest().enqueue(new Callback<FixerObject>() {
+                    @Override
+                    public void onResponse(Call<FixerObject> call, Response<FixerObject> response) {
+                        FixerObject latest = response.body();
+                        NumberFormat formatter = new DecimalFormat("#0.0000");
+
+                        //targetET.setText(""+formatter.format(sourceCurrency*(latest.getRate(targetCurrencyText)/latest.getRate(sourceCurrencyText))));
+
+                        targetTV.setText(""+formatter.format(sourceCurrency*(latest.getRate(targetCurrencyText)/latest.getRate(sourceCurrencyText))));
+                    }
+
+                    @Override
+                    public void onFailure(Call<FixerObject> call, Throwable t) {
+
+                    }
+                });
+            }
+        });
+
+
+
     }
+
 }

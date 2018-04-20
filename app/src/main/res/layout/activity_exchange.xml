@@ -9,56 +9,77 @@
     tools:context="com.example.fernomazer.androidproject.Exchange">
 
 
-    <include layout="@layout/menu_bar" />
-
+  <!--  <include layout="@layout/menu_bar" />
+-->
+    <include android:id="@+id/menu"
+        layout="@layout/menu_bar" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/sourceET"
-            android:layout_width="230dp"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:textAlignment="center"
-            android:text="0"/>
-        <Spinner
-            android:id="@+id/spinnerSource"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp">
+
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:drawable/btn_dropdown"
-            android:spinnerMode="dropdown"
-            android:textAlignment="center"
-            android:gravity="center"/>
-    </LinearLayout>
+            android:layout_marginVertical="10dp"
+            >
+            <EditText
+                android:id="@+id/sourceET"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:text="0"/>
+            <Spinner
+                android:id="@+id/spinnerSource"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dropdown"
+                android:gravity="center"/>
+        </LinearLayout>
 
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:src="@mipmap/ic_arrows">
+        <ImageView
+            android:id="@+id/imvExchange"
+            android:layout_width="200px"
+            android:layout_height="200px"
+            android:layout_margin="5dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_arrows">
 
-    </ImageView>
+        </ImageView>
 
-    <Spinner
-        android:id="@+id/spinnerTarget"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:gravity="center"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="306dp"
+        <Spinner
+            android:layout_marginVertical="10dp"
+            android:id="@+id/spinnerTarget"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/targetTV"/>
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="36dp"
+                android:id="@+id/targetTV"/>
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
 
 </LinearLayout>
 
